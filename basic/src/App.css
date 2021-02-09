@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+}
+
+.header {
+  background-color: #282c34;
+  height: 50px;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.login-button {
+  justify-content: right;
+  height: 30px;
+  margin-right: -50vw;
+}
+
+.current-number {
+  margin: 1rem 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+button.calc {
+  border: none;
+  background-color: #61dafb;
+  width: 30px;
+  margin: 10px;
+  padding: 5px 10px;
+}
