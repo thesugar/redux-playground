@@ -4,7 +4,8 @@
 
 **Re-ducks パターン**
 
-- src
+```
+src
 |- state
     |- ducks
         |- counter
@@ -16,3 +17,4 @@
             |- actions.ts
             |- reducers.ts
             |- types.ts
+```
