@@ -6,20 +6,23 @@ export type CounterState = Readonly<{
 }>
 
 const initialState: CounterState = {
-  count: 0
+  count: 0,
 }
 
-const counterReducer = (state = initialState, action: CounterAction): CounterState => {
-    switch (action.type) {
-      case types.INCREMENT:
-        return {count: state.count + action.payload.num}
-    
-      case types.DECREMENT:
-        return {count: state.count - action.payload.num}
-      
-      default:
-        return state
-    }
+const counterReducer = (
+  state = initialState,
+  action: CounterAction
+): CounterState => {
+  switch (action.type) {
+    case types.INCREMENT:
+      return { count: state.count + action.payload.num }
+
+    case types.DECREMENT:
+      return { count: state.count - action.payload.num }
+
+    default:
+      return state
+  }
 }
 
 export { counterReducer }

@@ -7,13 +7,18 @@ import { rootReducer } from './state/store'
 import { Provider } from 'react-redux'
 import { devToolsEnhancer } from 'redux-devtools-extension'
 
-const store = createStore(rootReducer, undefined, devToolsEnhancer({})) /* (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__() でもよい*/
+const store = createStore(
+  rootReducer,
+  undefined,
+  devToolsEnhancer({})
+) /* (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__() でもよい*/
 
+// eslint-disable-next-line
 ReactDOM.render(
   <Provider store={store}>
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
   </Provider>,
   document.getElementById('root')
 )
